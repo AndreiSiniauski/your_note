@@ -1,0 +1,16 @@
+.add-reminder-button {
+  position: fixed;
+  bottom: 10px;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-reminder-button button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

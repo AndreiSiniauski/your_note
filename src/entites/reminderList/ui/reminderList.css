@@ -1,0 +1,11 @@
+.reminder-list {
+  margin: 20px 0;
+  color: #fff;
+}
+
+.reminder-item {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}

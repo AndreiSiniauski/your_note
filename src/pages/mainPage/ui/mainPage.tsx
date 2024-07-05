@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Header } from '@shared/ui';
+import { AddReminderButton, Header } from '@shared/ui';
 import { Calendar } from "@feature/calendar";
 import "./mainPage.css";
 
@@ -20,10 +20,15 @@ function MainPage() {
     window.Telegram.WebApp.expand();
   },[])
 
+  const handle = () => {
+    console.log('asdjik')
+  }
+
   return (
     <main className="main">
       <Header username={username}/>
       <Calendar reminders={reminders}/>
+      <AddReminderButton />
     </main>
   );
 }
