@@ -1,16 +1,16 @@
 import {FC} from 'react';
-import './ReminderList.css';
+import './reminderList.css';
 
-interface Reminder {
+interface IReminder {
   text: string;
   date: string;
 }
 
-interface ReminderListProps {
-  reminders: Reminder[];
+interface IReminderListProps {
+  reminders: IReminder[];
 }
 
-const ReminderList: FC<ReminderListProps> = ({ reminders }) => {
+const ReminderList: FC<IReminderListProps> = ({ reminders }) => {
   return (
     <div className="reminder-list">
       {reminders.map((reminder, index) => (
