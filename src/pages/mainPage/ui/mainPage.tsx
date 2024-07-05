@@ -17,7 +17,7 @@ interface IMainPageProps {
 
 const MainPage: FC<IMainPageProps> = ({user}) => {
   const [reminders, setReminders] = useState<IReminder[]>([]);
-  const userId = user?.id?.toString();
+  const userId = user?.id?.toString() || 'jk39dji33rik0';
 
   useEffect(() => {
     const fetchReminders = async () => {
