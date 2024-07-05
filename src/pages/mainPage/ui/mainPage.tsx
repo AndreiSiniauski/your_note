@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Header from "../../../shared/ui/header/header";
-import Calendar from "react-calendar";
+import { Header } from '@shared/ui';
+import { Calendar } from "@feature/calendar";
 import "./mainPage.css";
 
 function MainPage() {
