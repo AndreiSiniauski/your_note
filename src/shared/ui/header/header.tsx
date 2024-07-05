@@ -7,9 +7,9 @@ interface IHeaderProps {
 
 const Header: FC<IHeaderProps> = ({username}) => {
     return (
-        <header className='header'>
+        <div className='header'>
             <p>Добро пожаловать, <strong>{username || 'гость'}</strong>!</p>
-        </header>
+        </div>
     )
 }
 

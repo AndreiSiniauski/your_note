@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "../../../shared/ui/header/header";
+import Calendar from "react-calendar";
+import "./mainPage.css";
 
 function MainPage() {
   const [username, setUsername] = useState('');
@@ -13,9 +15,10 @@ function MainPage() {
   },[])
 
   return (
-    <>
+    <main className="main">
       <Header username={username}/>
-    </>
+      <Calendar/>
+    </main>
   );
 }
 
