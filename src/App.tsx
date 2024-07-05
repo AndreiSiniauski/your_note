@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState<string | undefined>('');
 
   useEffect(() => {
     if(window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.user) {
