@@ -9,6 +9,7 @@ interface Reminder {
 
 export const addReminder = async (uid: string, text: string, date: string) => {
   try {
+    console.log("Adding reminder:", { uid, text, date });
     await addDoc(collection(db, 'reminders'), {
       uid,
       text,
@@ -22,9 +23,12 @@ export const addReminder = async (uid: string, text: string, date: string) => {
 
 export const getReminders = async (uid: string): Promise<Reminder[]> => {
   try {
+    console.log("Getting reminders for UID:", uid);
     const q = query(collection(db, 'reminders'), where('uid', '==', uid));
     const querySnapshot = await getDocs(q);
-    return querySnapshot.docs.map(doc => doc.data() as Reminder);
+    const reminders = querySnapshot.docs.map(doc => doc.data() as Reminder);
+    console.log("Reminders retrieved:", reminders);
+    return reminders;
   } catch (error) {
     console.error("Error getting reminders: ", error);
     return [];
