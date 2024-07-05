@@ -12,7 +12,7 @@ interface IReminder {
 }
 
 interface IMainPageProps {
-  user: WebAppUser;
+  user: WebAppUser | undefined;
 }
 
 const MainPage: FC<IMainPageProps> = ({user}) => {
