@@ -11,8 +11,6 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID
 };
 
-console.log(firebaseConfig.apiKey)
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
