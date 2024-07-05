@@ -3,8 +3,14 @@ import { Header } from '@shared/ui';
 import { Calendar } from "@feature/calendar";
 import "./mainPage.css";
 
+interface IReminder {
+  text: string;
+  date: string;
+}
+
 function MainPage() {
   const [username, setUsername] = useState('');
+  const [reminders] = useState<IReminder[]>([]);
 
   useEffect(() => {
     if(window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.user) {
@@ -17,7 +23,7 @@ function MainPage() {
   return (
     <main className="main">
       <Header username={username}/>
-      <Calendar/>
+      <Calendar reminders={reminders}/>
     </main>
   );
 }
